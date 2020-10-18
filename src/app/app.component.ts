@@ -29,7 +29,7 @@ export class AppComponent {
     },
     {
       title: 'Hong Kong City',
-      url: '',
+      url: 'https://is.gd/tSPlwG',
     },
     {
       title: 'At the beach',
