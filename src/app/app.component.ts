@@ -93,4 +93,8 @@ export class AppComponent {
       url: 'https://is.gd/Ix5QJd',
     },
   ];
+
+  checkWindowIndex(index: number): boolean {
+    return Math.abs(this.currentPage - index) < 5;
+  }
 }
