@@ -6,6 +6,7 @@
     <ng-container *ngFor="let image of images; let i = index">
       <li
         *ngIf="checkWindowIndex(i)"
+        appClass
         [ngClass]="{ active: i === currentPage }"
         class="page-item"
       >
@@ -21,15 +22,7 @@
   </ul>
 </nav>
 
-<div [ngSwitch]="currentPage">
-  <div *ngSwitchCase="0">Current page is 0</div>
-  <div *ngSwitchCase="1">Current page is 1</div>
-  <div *ngSwitchCase="4">Current page is 4</div>
-  <div *ngSwitchCase="5">Current page is 5</div>
-  <div *ngSwitchDefault>Unknown current page</div>
-</div>
-
-<!-- <div>
+<div *ngIf="images.length > 0">
   <h4>{{ images[currentPage].title }}</h4>
   <img [src]="images[currentPage].url" alt="image[currentPage].title" />
-</div> -->
+</div>
